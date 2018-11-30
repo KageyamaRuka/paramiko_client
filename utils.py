@@ -60,8 +60,8 @@ def auto(hour, minute, second, immediately=False):
             if immediately is True:
                 job(*args, **kwargs)
             now = datetime.today()
-            then = now.replace(day=now.day + 1, hour=hour,
-                               minute=minute, second=second)
+            tomorrow = now + timedelta(days=1)
+            then = tomorrow.replace(hour=hour, minute=minute, second=second)
             deltaTime = then - now
             secs = deltaTime.seconds + 1
             time.sleep(secs)
