@@ -1,1 +1,2 @@
-# A ssh client based on paramiko with ssh jump and log support
+# A SSH client
+A simple SSH client based on [paramiko](https://www.paramiko.org/) with SSH jump and log support
